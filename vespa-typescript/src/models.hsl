@@ -1,0 +1,13 @@
+
+model User = {
+  firstName: string = 1
+  lastName: string = 2
+  email: string = 3
+  age: int = 4
+}
+
+model Post = {
+  userId: string 	= 1
+  title: 	string 	= 2
+  body: 	string 	= 3
+}
