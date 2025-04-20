@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@hiveops/cli": "^0.0.27",
+    "@hiveops/cli": "^0.0.28",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
