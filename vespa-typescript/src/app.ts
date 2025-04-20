@@ -25,7 +25,7 @@ const start = async () => {
   }
 
   const post = await postRepository.saveOne({
-    userId: user._vespa_id,
+    userId: user.id,
     title: faker.lorem.words(3),
     body: faker.lorem.paragraph(),
   });
