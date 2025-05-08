@@ -2,21 +2,21 @@
 // This is a comment
 
 enum UserRole<user_role> {
-  ADMIN = 1
-  USER  = 2
+  ADMIN = 1 @text("admin")
+  USER  = 2 @text("user")
 }
 
 type Person<person> = {
-  firstName: string = 1
-  lastName:  string = 2
-  age:       int    = 3
+  firstName: string = 1 @unique
+  lastName?:  string = 2 @default("Doe")
+  age:       int    = 3 @min(0) @max(120)
 }
 
 type Image<image> = {
   url:    string = 1
   alt:    string = 2
-  width:  int    = 3
-  height: int    = 4
+  width:  int[]    = 3
+  height: map[string]int    = 4
 }
 
 model User<user> = Person & {
@@ -27,7 +27,7 @@ model User<user> = Person & {
   profileImage: Image 		= 5
 }
 
-model Post<post> = {
+model Post<posbt> = {
   userId: string 	= 1
   title: 	string 	= 2
   body: 	string 	= 3

@@ -25,3 +25,5 @@ export class PostRepository extends BaseRepository<PostData, Post> {
     });
   }
 }
+
+export const postRepository = new PostRepository();

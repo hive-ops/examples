@@ -1,11 +1,12 @@
 import { faker } from "@faker-js/faker";
+import { initialize } from "@hiveops/core";
 import { configDotenv } from "dotenv";
-import { postRepository, userRepository, vespaInit } from "./vespa";
+import { postRepository, userRepository } from "./vespa";
 
 configDotenv();
 
 const start = async () => {
-  vespaInit();
+  initialize();
 
   const firstName = faker.person.firstName();
   const lastName = faker.person.lastName();

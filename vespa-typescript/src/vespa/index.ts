@@ -5,6 +5,8 @@
  * See the Vespa documentation for more information.
  */
 
-export * from "./initialize";
+export * from "./image";
+export * from "./person";
 export * from "./post";
 export * from "./user";
+export * from "./user-role";
