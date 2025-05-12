@@ -1,12 +1,12 @@
 import { faker } from "@faker-js/faker";
-import { initialize } from "@hiveops/core";
+import { vespaInit } from "@hiveops/core";
 import { configDotenv } from "dotenv";
-import { postRepository, userRepository } from "./vespa";
+import { postRepository, userRepository, UserRole } from "./vespa";
 
 configDotenv();
 
 const start = async () => {
-  initialize();
+  vespaInit();
 
   const firstName = faker.person.firstName();
   const lastName = faker.person.lastName();
@@ -17,6 +17,15 @@ const start = async () => {
     lastName,
     email,
     age: faker.number.int({ min: 21, max: 45 }),
+    isActive: faker.datatype.boolean(),
+    lastLogin: faker.date.past().toISOString(),
+    profileImage: {
+      url: faker.image.avatar(),
+      width: faker.number.int({ min: 100, max: 500 }),
+      height: faker.number.int({ min: 100, max: 500 }),
+      alt: faker.lorem.words(3),
+    },
+    role: UserRole.ADMIN,
   });
   console.log(user);
 
