@@ -27,7 +27,7 @@ model User<user> = Person & {
   profileImage: Image 		= 5
 }
 
-model Post<posbt> = {
+model Post<post> = {
   userId: string 	= 1
   title: 	string 	= 2
   body: 	string 	= 3
