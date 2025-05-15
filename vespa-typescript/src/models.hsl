@@ -2,8 +2,8 @@
 // This is a comment
 
 enum UserRole<user_role> {
-  ADMIN = 1 @text("admin")
-  USER  = 2 @text("user")
+  ADMIN = 1
+  USER  = 2
 }
 
 type Person<person> = {
@@ -21,9 +21,9 @@ type Image<image> = {
 
 model User<user> = Person & {
   email: 				string 		= 1
-  role: 				UserRole = 2
+  role: 				UserRole  = 2
   isActive: 		bool 			= 3
-  lastLogin: 		string 			= 4
+  lastLogin: 		Timestamp = 4
   profileImage: Image 		= 5
 }
 

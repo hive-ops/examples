@@ -18,7 +18,7 @@ const start = async () => {
     email,
     age: faker.number.int({ min: 21, max: 45 }),
     isActive: faker.datatype.boolean(),
-    lastLogin: faker.date.past().toISOString(),
+    lastLogin: new Date(Date.now()),
     profileImage: {
       url: faker.image.avatar(),
       width: faker.number.int({ min: 100, max: 500 }),
