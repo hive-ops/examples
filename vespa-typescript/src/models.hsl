@@ -22,7 +22,7 @@ type Image<image> = {
 model User<user> = Person & {
   email: 				string 		= 1
   role: 				UserRole  = 2
-  isActive: 		bool 			= 3
+  isActive: 		bool			= 3
   lastLogin: 		Timestamp = 4
   profileImage: Image 		= 5
 }
