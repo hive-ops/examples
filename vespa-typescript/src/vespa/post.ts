@@ -7,7 +7,7 @@
 */
 
 
-import { ColumnType, Metadata } from "@hiveops/core";
+import { Metadata } from "@hiveops/core";
 import { BaseRepository } from "@hiveops/node";
 
 
@@ -21,11 +21,7 @@ export type Post = Metadata & PostData;
 
 export class PostRepository extends BaseRepository<PostData, Post> {
   constructor() {
-    super("Post", {
-			body: ColumnType.TEXT,
-			title: ColumnType.TEXT,
-			userId: ColumnType.TEXT,
-		});
+    super("Post");
   }
 }
 
