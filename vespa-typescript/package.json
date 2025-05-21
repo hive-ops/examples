@@ -16,12 +16,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@hiveops/cli": "^0.0.39",
+    "@hiveops/cli": "^0.0.40",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
   "dependencies": {
     "@faker-js/faker": "^9.7.0",
-    "@hiveops/node": "^0.0.29"
+    "@hiveops/node": "^0.0.30"
   }
 }

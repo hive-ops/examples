@@ -18,7 +18,7 @@ export type UserData = Person & {
   email: string;
   isActive: boolean;
   lastLogin: Date;
-  profileImage: Image;
+  profileImage?: Image;
   role: UserRole;
 };
 
