@@ -27,7 +27,9 @@ const start = async () => {
     },
     role: UserRole.ADMIN,
   });
+  console.log("User created:");
   console.log(user);
+  console.log("\n")
 
   if (!user) {
     console.error("User not found");
@@ -39,15 +41,16 @@ const start = async () => {
     title: faker.lorem.words(3),
     body: faker.lorem.paragraph(),
   });
+  console.log("Post created:");
   console.log(post);
 
-  const users = await userRepository.findMany({});
-  console.log(users);
+  // const users = await userRepository.findMany({});
+  // console.log("All users:");
+  // console.log(users);
 
-  const posts = await postRepository.findMany({});
-  console.log(posts);
-
-
+  // const posts = await postRepository.findMany({});
+  // console.log("All posts:");
+  // console.log(posts);
 };
 
 start().catch(console.error);

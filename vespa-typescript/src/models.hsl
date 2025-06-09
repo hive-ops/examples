@@ -27,8 +27,19 @@ model User<user> = Person & {
   profileImage?: Image 		= 5
 }
 
+model Admin<admin> = Person & {
+  adminSince: Timestamp = 1
+  permissions: string[] = 2
+}
+
 model Post<post> = {
   userId: string 	= 1
   title: 	string 	= 2
   body: 	string 	= 3
+}
+
+model Area<area> = {
+  refs: string = 1
+  state: string = 2
+  countries: string = 3
 }

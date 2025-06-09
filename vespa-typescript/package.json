@@ -8,6 +8,7 @@
     "build": "npm run clean && tsc",
     "dev": "ts-node src/app.ts",
     "update": "ncu @hiveops/* -u && npm install",
+    "vespa:clean": "mv src/models.hsl src/models.hsl.bak && hive vespa apply && mv src/models.hsl.bak src/models.hsl && rm -rf src/vespa/",
     "vespa:generate": "hive vespa generate -p ts",
     "vespa:apply": "hive vespa apply",
     "vespa:generate-and-apply": "hive vespa generate-and-apply -p ts"
