@@ -1,5 +1,5 @@
 import { faker } from "@faker-js/faker";
-import { vespaInit } from "@hiveops/core";
+import { vespaInit } from "@hiveops/node";
 import { configDotenv } from "dotenv";
 import { postRepository, userRepository, UserRole } from "./vespa";
 
@@ -44,13 +44,6 @@ const start = async () => {
   console.log("Post created:");
   console.log(post);
 
-  // const users = await userRepository.findMany({});
-  // console.log("All users:");
-  // console.log(users);
-
-  // const posts = await postRepository.findMany({});
-  // console.log("All posts:");
-  // console.log(posts);
 };
 
 start().catch(console.error);

@@ -9,7 +9,6 @@
 
 
 export * from "./admin";
-export * from "./area";
 export * from "./image";
 export * from "./person";
 export * from "./post";

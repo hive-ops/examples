@@ -37,9 +37,3 @@ model Post<post> = {
   title: 	string 	= 2
   body: 	string 	= 3
 }
-
-model Area<area> = {
-  refs: string = 1
-  state: string = 2
-  countries: string = 3
-}

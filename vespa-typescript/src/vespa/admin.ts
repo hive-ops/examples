@@ -7,8 +7,7 @@
 */
 
 
-import { Metadata } from "@hiveops/core";
-import { BaseRepository } from "@hiveops/node"; 
+import { Metadata, BaseRepository } from "@hiveops/core";
 import { Person } from "./person";
 
 
