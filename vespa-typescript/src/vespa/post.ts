@@ -7,7 +7,7 @@
 */
 
 
-import { BaseRepository, Metadata } from "@hiveops/core";
+import { Metadata, BaseRepository } from "@hiveops/core";
 
 
 export type PostData = {
